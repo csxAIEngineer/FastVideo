@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: Apache-2.0
+"""Start the local FastH3 Trim DashScope-compatible API (127.0.0.1:8765)."""
+
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from local_api.server import main
+
+if __name__ == "__main__":
+    raise SystemExit(main())
