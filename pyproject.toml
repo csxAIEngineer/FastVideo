@@ -263,6 +263,7 @@ mlx = [
 
 [project.scripts]
 fastvideo = "fastvideo.entrypoints.cli.main:main"
+fasth3-local-api = "local_api.server:main"
 infinite-livestream-server = "infinite_livestream.server_entry:cli"
 dreamverse-server = "dreamverse.server_entry:cli"
 dreamverse-mock-server = "dreamverse.mock_server:cli"

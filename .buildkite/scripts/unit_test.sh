@@ -9,7 +9,10 @@ export FASTVIDEO_FA4=0
 
 # The livestream app's tests are CPU-only; its single gpu-marked module is
 # deselected, and DreamVerse's GPU tests have their own lane.
+# tests/test_local_api.py fakes the Trim generator and does not import
+# FastVideo at collection time.
 exec pytest \
+  ./tests/test_local_api.py \
   ./apps/infinite_livestream/infinite_livestream/tests \
   ./fastvideo/tests/api/ \
   ./fastvideo/tests/contract/ \
